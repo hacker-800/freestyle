@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh ;
+            background-color: black;
+            overflow: hidden;
+        }
+        #sun{
+         position: absolute;
+            top: 40%;
+            left: 40%;
+            height: 200px;
+            width: 200px;
+            background-color: orange;
+            box-shadow: 0 0 128px red;
+            border-radius: 50%;
+            
+            
+        }
+        #invisible{
+           height: 700px;
+           width: 700px;
+           
+           margin-top: 85px;
+           margin-left: 385px;
+           position: absolute;
+           animation-name: revolutionn;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            
+            
+        }
+        #earth{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            top: 10%;
+            left: 10%;
+           transform: translateX(-100px);
+            display: inline-block;
+            animation-name: revolution;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            transform: translateX(200px);
+        }
+        @keyframes revolution{
+            from{transform: rotateZ(360deg);}
+            to{transform: rotateZ(0deg);}
+        }
+        @keyframes revolutionn{
+            from{transform: rotateZ(0deg);}
+            to{transform: rotateZ(360deg);}
+        }
+        #moon{
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            margin-left: 120px;
+            background: linear-gradient(white,black);
+            border-radius: 50%;
+            animation-name: moon;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: moon;
+           
+        }
+        @keyframes moon{
+            from{transform: rotateZ(0deg);}
+            to{transform: rotateZ(360deg);}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="invisible">
+        <img id="moon"src="/moon.png" alt="">
+        <img id="earth" src="/earth.png" alt="">
+        
+    </div>
+    <div id="sun">
+        
+    </div>
+</body>
+</html>
